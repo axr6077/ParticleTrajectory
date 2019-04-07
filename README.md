@@ -2,7 +2,7 @@
 Study of the GRS1915+105 BHXRB system to trace an arbitrary object around this particular BH. The simulation is based on Schwarzschild geodesic ODEs and integrating them around several parameters. The path is realistic and based on real time data collected from GRANAT data releases. The accretion disk is defined by the predictive model of X-ray light curves classifiers determined through various deep learning models. 
 
 ## Parameters
-The parameters defined for modelling the simulation is derived from backend tools and machine learning algorithms as presented in 
+The parameters defined for modelling the simulation is derived from backend tools and machine learning algorithms covered in [this repository](https://github.com/axr6077/Black-Hole-X-ray-binary-Evolution).
 
 ## Requirements
 * Chrome/Firefox/Microsoft Edge
