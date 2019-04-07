@@ -1,8 +1,4 @@
 "use strict"
-/*global THREE, SHADER_LOADER, Mustache, Stats, Detector, $, dat:false */
-/*global document, window, setTimeout, requestAnimationFrame:false */
-/*global ProceduralTextures:false */
-
 if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
 function Observer() {
@@ -308,7 +304,6 @@ function setupGUI() {
     folder.add(p.planet, 'distance').min(1.5).onChange(updateUniforms);
     folder.add(p.planet, 'radius').min(0.01).max(2.0).onChange(updateUniforms);
     $(folder.domElement).addClass('planet-controls');
-    //folder.open();
 
     function setGuiRowClass(guiEl, klass) {
         $(guiEl.domElement).parent().parent().addClass(klass);
@@ -330,8 +325,6 @@ function setupGUI() {
     folder = gui.addFolder('Time');
     folder.add(p, 'light_travel_time').onChange(updateShader);
     folder.add(p, 'time_scale').min(0);
-    //folder.open();
-
 }
 
 function onWindowResize( event ) {
@@ -342,10 +335,6 @@ function onWindowResize( event ) {
 function initializeCamera(camera) {
 
     var pitchAngle = 3.0, yawAngle = 0.0;
-
-    // there are nicely named methods such as "lookAt" in the camera object
-    // but there do not do a thing to the projection matrix due to an internal
-    // representation of the camera coordinates using a quaternion (nice)
     camera.matrixWorldInverse.makeRotationX(degToRad(-pitchAngle));
     camera.matrixWorldInverse.multiply(new THREE.Matrix4().makeRotationY(degToRad(-yawAngle)));
 
@@ -368,8 +357,6 @@ function updateCamera( event ) {
     }
 
     camera_matrix.set(
-        // row-major, not the same as .elements (nice)
-        // y and z swapped for a nicer coordinate system
         m[0], m[1], m[2],
         m[8], m[9], m[10],
         m[4], m[5], m[6]
