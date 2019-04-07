@@ -4,6 +4,15 @@ Study of the GRS1915+105 BHXRB system to trace an arbitrary object around this p
 ## Parameters
 The parameters defined for modelling the simulation is derived from backend tools and machine learning algorithms covered in [this repository](https://github.com/axr6077/Black-Hole-X-ray-binary-Evolution).
 
+## LightCure and UI setup
+Light spectrums were optimized to fit the curve around the entity. 
+![Initial Ray Tracer](https://github.com/axr6077/ParticleTrajectory/blob/master/Python%20Scripts/out/ray_tracer.PNG?raw=true "Initial Ray Tracer") 
+![Chromatic Spectra](https://github.com/axr6077/ParticleTrajectory/blob/master/Python%20Scripts/out/spectra.PNG?raw=true "Chromatic Spectra") 
+![Deflection Angle](https://github.com/axr6077/ParticleTrajectory/blob/master/Python%20Scripts/out/deflection_angle.PNG?raw=true "Deflection Angle") 
+![Temperature Spectrum](https://github.com/axr6077/ParticleTrajectory/blob/master/Python%20Scripts/out/tempSpectrum.PNG) 
+![Optimized light Spectrum](https://github.com/axr6077/ParticleTrajectory/blob/master/Python%20Scripts/out/optimized.PNG) 
+![Particle trace Spectrum](https://github.com/axr6077/ParticleTrajectory/blob/master/Python%20Scripts/out/particle_trace.PNG) 
+
 ## Requirements
 * Chrome/Firefox/Microsoft Edge
 * Considerable GPU power for 30+ fps
