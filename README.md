@@ -7,6 +7,7 @@ The parameters defined for modelling the simulation is derived from backend tool
 ## Requirements
 * Chrome/Firefox/Microsoft Edge
 * Considerable GPU power for 30+ fps
+* Any IDE that supports Python, HTML and JS for development
 
 ## Validation
 Based on real spectral data and predictive models with external parameters affecting orbit. It considers superluminal speeds as well. It doesn't consider presence of dark matter yet. The entity is a stellar mass BH hence validating the visual GR model. 
@@ -14,6 +15,10 @@ Based on real spectral data and predictive models with external parameters affec
 ## Factors to consider
 * Texture sampling issues might affect star brightness instability
 * Light paths may tend to bend a bit more than they should due to low ODE solver step counts, however, this seems to happen in a systematic way so that the image looks very similar in comparison to a more accurate simulation.
+
+## Development Environment
+* JetBrains WebStorm Personal Edition
+* JetBrains PyCharm Community Edition
 
 ## Contributions and License
 Feel free to create PR. Licensed under MIT license [available here](https://github.com/axr6077/ParticleTrajectory/blob/master/LICENSE). 
