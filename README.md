@@ -22,7 +22,7 @@ Light spectrums were optimized to fit the curve around the entity.
 Based on real spectral data and predictive models with external parameters affecting orbit. It considers superluminal speeds as well. It doesn't consider presence of dark matter yet. The entity is a stellar mass BH hence validating the visual GR model. 
 
 ## Factors to consider
-* Texture sampling issues might affect star brightness instability
+* Texture sampling issues might affect star brightness stability
 * Light paths may tend to bend a bit more than they should due to low ODE solver step counts, however, this seems to happen in a systematic way so that the image looks very similar in comparison to a more accurate simulation.
 
 ## Development Environment
