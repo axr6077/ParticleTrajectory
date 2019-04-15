@@ -1,4 +1,5 @@
 import scipy.ndimage
+from scipy.misc.pilutil import imread
 import numpy as np
 import matplotlib.pyplot as plt
 from spectrum import *

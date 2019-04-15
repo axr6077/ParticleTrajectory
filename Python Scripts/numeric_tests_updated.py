@@ -31,8 +31,6 @@ plt.plot(path_time(path), path_r(path))
 plt.plot(path_arc_length(path), path_r(path))
 plt.show()
 plt.plot(path_arc_length(path), path_time(path))
-# print(ball_entry_time(path, 3.5))
-# print(ball_entry_dist(path, 3.5))
 
 radius = 8.0
 for n_steps in [100, 200, 500, 1500, 5000]:

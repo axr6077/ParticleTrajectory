@@ -1,6 +1,5 @@
 import numpy as np
 
-
 def interp1d(x, data_x, data_y):
     if len(data_y.shape) == 1:
         data_y = data_y[np.newaxis, :]
@@ -29,7 +28,6 @@ class Spectrum:
 
     def cie_1931_xyz(self):
         if not hasattr(self, 'cie_xyz'):
-            # Google for "CIE 1931 data" to find an XLS with this data
             cie_data = np.genfromtxt('data/cie-1931.csv', delimiter=',')
             self.cie_xyz = self.map_left(cie_data[:, 0], cie_data[:, 1:].T)
         return self.cie_xyz
@@ -47,9 +45,6 @@ class Spectrum:
         return intensity / np.sum(intensity)
 
     def black_body(self, T, normalized=True, doppler_factor=1.0):
-        # Planck's law, the formula from the "Science. It works, bitches" xkcd
-        # strip. T is the (color) temperature in kelvins.
-
         from scipy.constants import h, c, k
 
         l = self.wavelengths * 1e-9 * doppler_factor
@@ -71,7 +66,6 @@ class Spectrum:
         return y
 
     def gaussian(self, mean, stdev):
-        # Gaussian, normalized to a value one at the maximum
         return np.exp(-0.5 * ((self.wavelengths - mean) / stdev) ** 2)
 
     def get_color(self, density, brightness=None):
